@@ -25,5 +25,5 @@ export const useDrawer = ({ drawerRef }: UseDrawerArgs) => {
     [],
   )
 
-  return { classDrawer, divRef, handleClose, isOpen }
+  return { classDrawer, divRef, handleClose, handleOpen, isOpen }
 }
