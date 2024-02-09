@@ -15,7 +15,7 @@ type DrawerContainer = {
 
 export const Drawer = ({ drawerRef, children }: DrawerContainer) => {
   const { classDrawer, divRef, handleClose, isOpen } = useDrawer({ drawerRef })
-  useClickOutside({ isOpen, toggle: handleClose, containerRef: divRef })
+  useClickOutside({ isOpen, handleClose, containerRef: divRef })
 
   return (
     <div
