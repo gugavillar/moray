@@ -54,11 +54,6 @@
     "vitest": "^1.2.2"
   },
   "lint-staged": {
-    "linters": {
-      "*.{ts,tsx}": "eslint --fix"
-    },
-    "ignore": [
-      "node_modules"
-    ]
+    "*.{ts,tsx}": "eslint --fix"
   }
 }
