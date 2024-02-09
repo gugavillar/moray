@@ -1,11 +1,12 @@
-function App() {
+import { GeoContainer, MapContainer, Header } from '@/components'
+
+export const App = () => {
   return (
     <>
-      <h1 className="flex flex-col text-3xl font-bold text-red-400">
-        Teste vite
-      </h1>
+      <Header />
+      <MapContainer className="size-full">
+        <GeoContainer />
+      </MapContainer>
     </>
-  );
+  )
 }
-
-export default App;

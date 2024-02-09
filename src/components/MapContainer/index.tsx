@@ -13,7 +13,7 @@ export const MapContainer = ({ children, ...props }: MapContainerProps) => {
   return (
     <ReactMapContainer
       center={[import.meta.env.VITE_MAP_LAT, import.meta.env.VITE_MAP_LNG]}
-      zoom={14}
+      zoom={13}
       {...props}
     >
       <TileLayer url={import.meta.env.VITE_MAP_URL} />
