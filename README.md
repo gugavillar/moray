@@ -72,7 +72,7 @@ git clone https://github.com/gugavillar/moray.git
 
 É necessário configurar as variáveis de ambiente para garantir o funcionamento correto do projeto. Um arquivo **.env.example** está disponível no repositório como modelo. Renomeie este arquivo para **.env** ou **.env.local** e adicione as variáveis de ambiente necessárias conforme descrito abaixo:
 
-- **VITE_MAP_URL:** Url que o leaftlet utiliza para estruturar os blocos de imagens do mapa [React Leaflet setup page](https://react-leaflet.js.org/docs/start-setup/).
+- **VITE_MAP_URL:** Url que o leaftlet utiliza para estruturar os blocos de imagens do mapa. Para mais informações consulte a documentação do [React Leaflet](https://react-leaflet.js.org/docs/start-setup/).
 - **VITE_MAP_LAT:** Valor da latitude inicial do mapa.
 - **VITE_MAP_LNG:** Valor da longitude inicial do mapa.
 
