@@ -44,6 +44,7 @@ describe('Moray test', () => {
 
   it('User close drawer when click on close button', () => {
     cy.get('path.leaflet-interactive').eq(3).click()
+    cy.wait(1000)
     cy.get('button.absolute').click()
     const drawer = cy.get('div.-translate-x-full')
     expect(drawer.should('have.class', '-translate-x-full'))

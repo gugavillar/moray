@@ -8,9 +8,7 @@ import { Drawer, DrawerRef } from '@/components'
 import neighborhoodGeoJSON from '@/assets/data/geometrias_bairros.json'
 import { Chart } from '../Chart'
 
-const style = () => ({
-  color: '#d62728',
-})
+const neighborhoodColors = ['#E28413', '#003F91', '#A833B9', '#BB0A21']
 
 export const GeoContainer = () => {
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<
@@ -27,7 +25,9 @@ export const GeoContainer = () => {
     <>
       <GeoJSON
         data={neighborhoodGeoJSON as NeighborhoodGeoJSON}
-        style={style}
+        style={(feature) => ({
+          color: neighborhoodColors[feature?.properties.id - 1],
+        })}
         onEachFeature={(feature, layer) => {
           layer
             .on({
