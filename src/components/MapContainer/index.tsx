@@ -1,15 +1,19 @@
-import { ReactNode } from 'react'
+import { LeafletMouseEvent } from 'leaflet'
 import {
   MapContainer as ReactMapContainer,
   MapContainerProps as ReactMapContainerProps,
   TileLayer,
 } from 'react-leaflet'
+import { GeoContainer } from '@/components'
 
 type MapContainerProps = ReactMapContainerProps & {
-  children: ReactNode
+  onNeighborhoodClick: (e: LeafletMouseEvent) => void
 }
 
-export const MapContainer = ({ children, ...props }: MapContainerProps) => {
+export const MapContainer = ({
+  onNeighborhoodClick,
+  ...props
+}: MapContainerProps) => {
   return (
     <ReactMapContainer
       center={[import.meta.env.VITE_MAP_LAT, import.meta.env.VITE_MAP_LNG]}
@@ -17,7 +21,7 @@ export const MapContainer = ({ children, ...props }: MapContainerProps) => {
       {...props}
     >
       <TileLayer url={import.meta.env.VITE_MAP_URL} />
-      {children}
+      <GeoContainer handleClick={onNeighborhoodClick} />
     </ReactMapContainer>
   )
 }
