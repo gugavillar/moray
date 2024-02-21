@@ -1,8 +1,9 @@
-import { MapContainer, Header, Drawer } from '@/components'
-import { Chart } from './components/Chart'
 import { useState } from 'react'
 import { LeafletMouseEvent } from 'leaflet'
+
 import { NeighborhoodFeatureProp } from './@types/map'
+
+import { MapContainer, Header, Drawer, Chart } from '@/components'
 
 export const App = () => {
   const [isOpen, setIsOpen] = useState(false)
